@@ -203,10 +203,10 @@ def get_page_result(url, site, cookies, headers):
                 cycle = tds[9].text.strip()
                 rows_list = [br, driving, shift, cycle]
                 min_c = rows_list[find_min(rows_list)]
-                if rows_list.index(min(rows_list)) == 0 and rows_list[1] < rows_list[3]:
+                if (rows_list.index(min(rows_list)) == 0 and rows_list[1] < rows_list[3]) or (rows_list.index(min(rows_list)) == 0 and rows_list[1] == rows_list[3]):
                     min_c = rows_list[find_min(rows_list)] + ' Break'
                 
-                if rows_list.index(min(rows_list)) == 0 and rows_list[0] == rows_list[3]:
+                if (rows_list.index(min(rows_list)) == 0 and rows_list[0] == rows_list[3]) or (rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[3]):
                     min_c = rows_list[find_min(rows_list)] + ' Cycle'
                     
                 if rows_list.index(min(rows_list)) == 1 and rows_list[1] < rows_list[2]:
@@ -215,8 +215,6 @@ def get_page_result(url, site, cookies, headers):
                 if rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[2]:
                     min_c = rows_list[find_min(rows_list)] + ' Shift'
 
-                if rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[3]:
-                    min_c = rows_list[find_min(rows_list)] + ' Cycle'
 
                 date = date.strftime('%b %d')
                 rows.append([c, site, name, duty, date, min_c, br, driving, shift, cycle, errors, priority])
