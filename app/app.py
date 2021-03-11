@@ -127,6 +127,29 @@ def parse_duties():
                 'referer': 'https://app.gpstab.com/client/trucks',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
+        },
+        {
+            'site': 'A Star', 
+            'url': 'https://app.tfmeld.com/client/units/listfortracks?s=1&d=false',
+            'cookies': {
+                'login': 'safety@astartrans.com',
+                '__RequestVerificationToken': 'jYd7NymVOOv-xSfZSlpYyKq8qH7_iSEE8HfBsmMTccVuiv6cYKsIVO8uTW6KwqC1xiDeQmI68jHWpT5LKEM2YcyLZ2nRqWr3f0hHr6O14bM1',
+                'ASP.NET_SessionId': 'ottdht1nyxad1zf1iufxwx1c',
+                'login_t': '2021-03-11T02:52:25.111Z',
+                # '_ga': 'GA1.2.956194597.1613551742',
+                'gpstab_x': 'F8374DA7DFA3231CA1DEBE854E083D50CF9B1310A5FB7BBCB178454D027B1A20FCD27877C02AC1AD6B57618D520229E7073EF8242DD3D7D4DD46924C31037C20D387BB55CE1A2843B4FAEAC2733727461AD05FDDCA72C464AA9C487FE1E94F739478E7785F42424D599741C37C51BAE066725E5EB2355BE63E16749F7E7BBF3E759017CAE67B6FE25010B60C5FF6E9698B91C07235FD27D283E2550ABE5A7B2A3DE189BDFB31788DB7975E7713428A1F130AE79D63396BD598D4185A55EA0DE167B6234D8C194BEF99B2DB8D8CE05A836BD0E82DBC4FC4B53344523C409BE310D77B73F4987D9E7B03AC7E4FF5902D4CDE265DAF9CB63AE35B10CA055ED54CF453BFA15B877601B56EA483D6EB2DA1213A9C1DA5BDDB1D52CDCFA14878988B43B41220F617134174203C4EB78AD4D92AE78CBF1AECFFDFF3F99C75B4E3718C0F46A9BF436658BECC233FB4B4CB68E016BD7CBC20D239990F79D5B7D1A6BE3A20D1A0E34131002E668DA288D1E6EE8018'
+            },        
+            'headers': {
+                'sec-fetch-dest': 'empty',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'x-requested-with': 'XMLHttpRequest',
+                # 'authority': 'app.brightroadstar.com',
+                'referer': 'https://app.tfmeld.com/client/trucks',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+            },
         }
     ]
 
@@ -299,6 +322,29 @@ def parse_urls(start_date, end_date):
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         
+        },
+        {
+            'site': 'A Star', 
+            'url': 'https://app.tfmeld.com/client/logs?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=10&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
+            'cookies': {
+                'login': 'safety@astartrans.com',
+                '__RequestVerificationToken': 'jYd7NymVOOv-xSfZSlpYyKq8qH7_iSEE8HfBsmMTccVuiv6cYKsIVO8uTW6KwqC1xiDeQmI68jHWpT5LKEM2YcyLZ2nRqWr3f0hHr6O14bM1',
+                'ASP.NET_SessionId': 'ottdht1nyxad1zf1iufxwx1c',
+                'login_t': '2021-03-11T02:52:25.111Z',
+                # '_ga': 'GA1.2.956194597.1613551742',
+                'gpstab_x': 'F8374DA7DFA3231CA1DEBE854E083D50CF9B1310A5FB7BBCB178454D027B1A20FCD27877C02AC1AD6B57618D520229E7073EF8242DD3D7D4DD46924C31037C20D387BB55CE1A2843B4FAEAC2733727461AD05FDDCA72C464AA9C487FE1E94F739478E7785F42424D599741C37C51BAE066725E5EB2355BE63E16749F7E7BBF3E759017CAE67B6FE25010B60C5FF6E9698B91C07235FD27D283E2550ABE5A7B2A3DE189BDFB31788DB7975E7713428A1F130AE79D63396BD598D4185A55EA0DE167B6234D8C194BEF99B2DB8D8CE05A836BD0E82DBC4FC4B53344523C409BE310D77B73F4987D9E7B03AC7E4FF5902D4CDE265DAF9CB63AE35B10CA055ED54CF453BFA15B877601B56EA483D6EB2DA1213A9C1DA5BDDB1D52CDCFA14878988B43B41220F617134174203C4EB78AD4D92AE78CBF1AECFFDFF3F99C75B4E3718C0F46A9BF436658BECC233FB4B4CB68E016BD7CBC20D239990F79D5B7D1A6BE3A20D1A0E34131002E668DA288D1E6EE8018'
+            },        
+            'headers': {
+                'sec-fetch-dest': 'empty',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'x-requested-with': 'XMLHttpRequest',
+                # 'authority': 'app.brightroadstar.com',
+                'referer': 'https://app.tfmeld.com/client/logs',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+            },
         }
     ]
 
