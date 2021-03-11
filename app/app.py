@@ -225,7 +225,7 @@ def get_page_result(url, site, cookies, headers):
 
 
 def error_priority(errors):
-    if errors.startswith('Distance') or errors.startswith('Driver Signature') or errors.startswith('Vehicle') or errors == '':
+    if errors.startswith('Distance') or errors.startswith('Driver Signature') or errors.startswith('Vehicle') or errors == '' or errors.startswith('Shipping Docs'):
         return 100
     return 1
 
