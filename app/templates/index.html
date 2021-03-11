@@ -178,26 +178,26 @@ div.dtsp-verticalContainer div.dtsp-dataTable{
             "pageMenu": [50, 100 ],
             "pageLength": 50,
             "ajax": '/get_logs',
-            // "order": [[11, 'asc'], [5, 'asc'], [4, 'desc']],
+            "order": [[11, 'asc'], [5, 'asc'], [4, 'desc']],
             "columnDefs": [
                 { "width": "1%", "targets": 0 },
                 { "width": "1%", "targets": 3 }
                     ],
-            // "columnDefs": [
-            // {
-            //     "targets": [ 11 ],
-            //     "visible": true,
+            "columnDefs": [
+            {
+                "targets": [ 11 ],
+                "visible": true,
                 
-            // }
-            // ],
-            // searchPanes: {
-            //     viewTotal: true,
-            //     order: ['Company', 'Duty'],
-            //     layout: 'columns-1'
-            // },
-            // dom: 'Plfrtip',
-            // responsive: true,
-            // dom: '<"dtsp-verticalContainer"<"dtsp-verticalPanes"P><"dtsp-dataTable"frtip>>'
+            }
+            ],
+            searchPanes: {
+                viewTotal: true,
+                order: ['Company', 'Duty'],
+                layout: 'columns-1'
+            },
+            dom: 'Plfrtip',
+            responsive: true,
+            dom: '<"dtsp-verticalContainer"<"dtsp-verticalPanes"P><"dtsp-dataTable"frtip>>'
             
                        
         } );
