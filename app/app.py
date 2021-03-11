@@ -180,48 +180,47 @@ def get_page_result(url, site, cookies, headers):
     r = requests.get(url, cookies=cookies, headers=headers)
     soup = BeautifulSoup(r.content, 'html.parser')
     table  = soup.find('tbody')
-    
-
     rows = []
-    c = 1
-    duty_dict = parse_duties()
-    for row in table.find_all('tr'):
-        tds = row.find_all('td')
-        date = tds[1].text.strip()
-        date = datetime.datetime.strptime(date + ' 2021', '%b %d %Y')
-        date_from = datetime.datetime.today() - datetime.timedelta(days = 1)
-        errors = tds[11].text.strip()
-        priority = error_priority(errors)
-        if date >= date_from or priority < 2:
-            name = tds[2].text.strip()            
-            duty = ''
-            if name in duty_dict.keys():
-                duty = duty_dict[name]
-                del duty_dict[name]
-            br = tds[6].text.strip()
-            driving = tds[7].text.strip()
-            shift = tds[8].text.strip()
-            cycle = tds[9].text.strip()
-            rows_list = [br, driving, shift, cycle]
-            min_c = rows_list[find_min(rows_list)]
-            if rows_list.index(min(rows_list)) == 0 and rows_list[1] < rows_list[3]:
-                min_c = rows_list[find_min(rows_list)] + ' Break'
-            
-            if rows_list.index(min(rows_list)) == 0 and rows_list[0] == rows_list[3]:
-                min_c = rows_list[find_min(rows_list)] + ' Cycle'
+    if table:
+        c = 1
+        duty_dict = parse_duties()
+        for row in table.find_all('tr'):
+            tds = row.find_all('td')
+            date = tds[1].text.strip()
+            date = datetime.datetime.strptime(date + ' 2021', '%b %d %Y')
+            date_from = datetime.datetime.today() - datetime.timedelta(days = 1)
+            errors = tds[11].text.strip()
+            priority = error_priority(errors)
+            if date >= date_from or priority < 2:
+                name = tds[2].text.strip()            
+                duty = ''
+                if name in duty_dict.keys():
+                    duty = duty_dict[name]
+                    del duty_dict[name]
+                br = tds[6].text.strip()
+                driving = tds[7].text.strip()
+                shift = tds[8].text.strip()
+                cycle = tds[9].text.strip()
+                rows_list = [br, driving, shift, cycle]
+                min_c = rows_list[find_min(rows_list)]
+                if rows_list.index(min(rows_list)) == 0 and rows_list[1] < rows_list[3]:
+                    min_c = rows_list[find_min(rows_list)] + ' Break'
                 
-            if rows_list.index(min(rows_list)) == 1 and rows_list[1] < rows_list[2]:
-                min_c = rows_list[find_min(rows_list)] + ' Driving'
+                if rows_list.index(min(rows_list)) == 0 and rows_list[0] == rows_list[3]:
+                    min_c = rows_list[find_min(rows_list)] + ' Cycle'
+                    
+                if rows_list.index(min(rows_list)) == 1 and rows_list[1] < rows_list[2]:
+                    min_c = rows_list[find_min(rows_list)] + ' Driving'
 
-            if rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[2]:
-                min_c = rows_list[find_min(rows_list)] + ' Shift'
+                if rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[2]:
+                    min_c = rows_list[find_min(rows_list)] + ' Shift'
 
-            if rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[3]:
-                min_c = rows_list[find_min(rows_list)] + ' Cycle'
+                if rows_list.index(min(rows_list)) == 1 and rows_list[1] == rows_list[3]:
+                    min_c = rows_list[find_min(rows_list)] + ' Cycle'
 
-            date = date.strftime('%b %d')
-            rows.append([c, site, name, duty, date, min_c, br, driving, shift, cycle, errors, priority])
-            c+=1
+                date = date.strftime('%b %d')
+                rows.append([c, site, name, duty, date, min_c, br, driving, shift, cycle, errors, priority])
+                c+=1
     return rows
 
 
@@ -353,8 +352,10 @@ def parse_urls(start_date, end_date):
     result = []
     
     for site in data_list:
-        # data_list.append(site)
-        result += get_page_result(site['url'], site['site'], site['cookies'], site['headers'])
+
+        rows = get_page_result(site['url'], site['site'], site['cookies'], site['headers'])
+        if rows:
+            result += rows
     
     return {'data' : result }
 
