@@ -223,10 +223,10 @@ def parse_duties():
             'site': 'Aco 1', 
             'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
             'cookies': {
-                # 'login': '0608muhammad@gmail.com',
-                # '__RequestVerificationToken': token_aco,
-                # 'ASP.NET_SessionId': asp_aco,
-                # 'login_t': '2021-03-13T02:11:53.552Z',
+                'login': 'aco1transportinc@gmail.com',
+                '__RequestVerificationToken': token_aco,
+                'ASP.NET_SessionId': asp_aco,
+                'login_t': login_t_aco,
                 # '_ga': 'GA1.2.1724191859.1614661196',
                 'gpstab_x': gpstab_x_aco
             },        
@@ -487,9 +487,9 @@ def parse_urls(start_date, end_date):
             'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
             'cookies': {
                 # 'login': '0608muhammad@gmail.com',
-                # '__RequestVerificationToken': token_aco,
-                # 'ASP.NET_SessionId': asp_aco,
-                # 'login_t': '2021-03-13T02:11:53.552Z',
+                '__RequestVerificationToken': token_aco,
+                'ASP.NET_SessionId': asp_aco,
+                'login_t': login_t_aco,
                 # '_ga': 'GA1.2.1724191859.1614661196',
                 'gpstab_x': gpstab_x_aco
             },                
