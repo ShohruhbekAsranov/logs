@@ -66,6 +66,10 @@ asp_silk = '2tl3zixutwgfbfu2v0hoj04i'
 login_t_silk = '2021-03-22T18:09:24.061Z'
 gpstab_x_silk = '2992F2B6EB568F1A4638AA3D4A6604F99D3CC308EFCF8EAF7EC408A8F10F44B2ABF9FDCDFE297807DC64CF4474A7C4DA81CD22C691CFC2E8C9FB427D2144DD68CC541900C3320292A6900594CAF1123F2F5C813C9E0B29222B2EEDCDD18106351CD59A679ECE86353E3DAFA6A8858FC7BC3DD7A98798D7EBB379474C3B4DE03AE2C4BCEA2BA6EA02F6AB4D91168589ECF25F7D88DA4F38A16AEDCBC98067E82E8E2215909CDDE99EC891D58D32CC30C203B91A3C6B3AF6D19321C0402AEFB5D158E632668018C5028D97DBADB92C6C4E91F4F052FB7B796AA0BECECF50ADAF6D8691BFE459E475717C6493DD1E05E1F6B3DDD4BE8A309EF2FA10EB21BECFB06B96DD9355E3BC984D5D773A699B9619EC1CDBB40EFB01A325B6BA4B077547CDD1E8B18C775D44AF4057600143DC9A8D93452E8C4717E2336E3B0D2C44BC7538204305E1FF39F2249C47187E6B5A69B3FC338BB074A19D68CD24B85D7090926612'
 
+token_aco = 'Z4Ae2-QH7pCmbn1IIxeiSivL0LYkgparmxpOuK9BEhoyl-TrYHBduCdtlgvsrucQE038PV6Ho_vcQYdGZ1sQ4w08RwP-xcg_9IwANaA3x5s1'
+login_t_aco = '2021-03-23T18:54:49.384Z'
+gpstab_x_aco = '651D0AF17E1D8EDA789F71C8E8A2A79537A0DC2B136B31601C1CAC89981299B0630DA9E07E1758A367F17DEDB18F003344A4862839C362C1A589B0F8AC77CD473C7B9143A0A75FBAA5BDD792B1BA81D5715540EF4EAD6F7D4B17BE65BDD3117B747EC4CB7BF8BEC45E57875B1BFC91092B70ED2E1C1FA15D1F17753D75A5D8BCAF0B38EB4E73A13A76F70BE8EF8D738032174588BBF1AF23E5A3952F58798589C801D1CB313EC29A391ADB605268C4F751F2EBF45DFAF749CF031BE78F1C7E817B837C5B3B0EC07375181145EB1BA5A4D8788B0C7442950A75C91373FAE1F6317CFC9D9503C8B4F32678A68A15474C52B0F0FDBF137139CC305418CE0A36F2AA31B8965603FE9058FA4554E5F11F98394B22A29150B37D3BAE7192E0EEBE4C5A963C3C0330C50048091D3D15B96D4A77ABD40DD288A4A7C7CD1434E0DD4F57B1F2698CB01EED69A71983AB000DFFDBBF34D18607A5F7E5820F9D562A7E2AAB3BC2E9CE714EB0C34C53D6D7018613582F'
+
 token_rush = '-wHpEvqbzxrc6GpLInG3icdBimcHuEQz6LFCY8wWYHy0cQ1cA0kkd60p0Q-XLPxCaSSISuKWRU-9Z5s9FqEn_sCE9i4SzuGKcHhCMmlk00I1'
 asp_rush = 'beowuxutkpnxkyywikw5epbq'
 gpstab_x_rush = 'C7756BBBBA6A2B9C4BB289C22B1F00931F38ECECC0136933C677A1BFBDC919EAAD17D0BCC24A9903B8A87441A428046F47B42D1612955E5E7E60645CC668E0E17E4C714A02004A4178F8165EEA6636F58DD2497E66A91DD5EA8A3D30A5E060808D70E0A2061CC582688F6789D723F7DB79C5EB364300267B97B5B8AD18BC465589C2225F2FE1EC3804A8F8D4E7C1FC379046A44DFEA48D0BAC4469C702A6940921BF41AFD4C11427A4994C01256B19359916CD3BAA20191C0AFF9FBBF6243F690925253E969ED32C021D291073D4FB0B3421F08C153AE114E5BC2A278BE7704D143BFFAA43044C603D1231993611789E4E95DBCF5B09C34FE74F2BD9D894FE1CC5DE86AFBBB88DFD46ED19CDEE5B6F33D1118E9FD3254508387A7B7A666F49BFDC8817A5579354E05861E15B07CEA395505BB02A66A2EEF85F6C31207CB33D19BE0C320CA8A0465E2A5ABBB12B3A894DF85224A2C08DA314443F4E94D8ED976D7384DFB60AEA905A1A2ACCA397C8DBDE48B41A114CE0FF47E03FA2EE447342CB'
@@ -201,6 +205,30 @@ def parse_duties():
                 # 'login_t': '2021-03-13T02:11:53.552Z',
                 # '_ga': 'GA1.2.1724191859.1614661196',
                 'gpstab_x': gpstab_x_rush
+            },        
+            'headers': {
+                'sec-fetch-dest': 'empty',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'x-requested-with': 'XMLHttpRequest',
+                'authority': 'app.tfmeld.com',
+                'referer': 'https://app.tfmeld.com/client/trucks',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+            }
+        }
+        },
+        {
+            'site': 'Aco 1', 
+            'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
+            'cookies': {
+                # 'login': '0608muhammad@gmail.com',
+                # '__RequestVerificationToken': token_aco,
+                # 'ASP.NET_SessionId': asp_aco,
+                # 'login_t': '2021-03-13T02:11:53.552Z',
+                # '_ga': 'GA1.2.1724191859.1614661196',
+                'gpstab_x': gpstab_x_aco
             },        
             'headers': {
                 'sec-fetch-dest': 'empty',
@@ -429,6 +457,7 @@ def parse_urls(start_date, end_date):
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         },
+
         {
             'site': 'Rush trukcing', 
             'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
@@ -447,8 +476,32 @@ def parse_urls(start_date, end_date):
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
                 'x-requested-with': 'XMLHttpRequest',
-                'authority': 'app.tfmeld.com',
-                'referer': 'https://app.tfmeld.com/client/logs',
+                # 'authority': 'app.tfmeld.com',
+                # 'referer': 'https://app.tfmeld.com/client/logs',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+            },
+        },
+        
+        {
+            'site': 'Aco 1', 
+            'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
+            'cookies': {
+                # 'login': '0608muhammad@gmail.com',
+                # '__RequestVerificationToken': token_aco,
+                # 'ASP.NET_SessionId': asp_aco,
+                # 'login_t': '2021-03-13T02:11:53.552Z',
+                # '_ga': 'GA1.2.1724191859.1614661196',
+                'gpstab_x': gpstab_x_aco
+            },                
+            'headers': {
+                'sec-fetch-dest': 'empty',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'x-requested-with': 'XMLHttpRequest',
+                # 'authority': 'app.tfmeld.com',
+                # 'referer': 'https://app.tfmeld.com/client/logs',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         }
