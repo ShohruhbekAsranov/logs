@@ -61,6 +61,10 @@ asp_lido = '2tl3zixutwgfbfu2v0hoj04i'
 login_t_lido = '2021-03-22T18:09:24.061Z'
 gpstab_x_lido = 'BFD398E4A8E272481D16C46C7712AAABD8D6359BEDE3F59759D88ED0CBFFA984FFD68B003B6B3F0CEDA7504AEDEBF5F6268A06227A56658306AB97EEE0F0568B04C50543912496A86C11D8F2C37DA1EC639B3A7C82676DBD301B6D99028A2EE82A3DE39983479B64F1B345DA9B8B688EF01B750A9BA9FF5C66716B886B26B1005E7C8A30B053B970FDFD7C4A2C0E74F4A47098F98AEFA9029843703394637D2F131150A2E1768123E6B54D6DC4EBD9EAC3F9A65AD413A8B8818035C879E68081C16E47341A045B7F1FDE916FDF8883A960E74BF08E95609B5AC38E6B4D2FCACBBF5279A6FCE5B2099A655446CCAB9B0030414E06DA80B3CA5D02A1B8F894C5522B7C510F328F1D0602A27F2B5AEDC4FA0D64DD5A8EB45A93C6888471A5001074B5DC5C590FCA6AECCAC024F0798F17752C9EA494B5752381EABA9F378D3BD36564A97562F2FE00D9E9B8142FFA75386B4E049CD26A6FB80240C120382EF32066CB476DF4BB69F5E41FAD366F5C4539C5'
 
+token_rush = '-wHpEvqbzxrc6GpLInG3icdBimcHuEQz6LFCY8wWYHy0cQ1cA0kkd60p0Q-XLPxCaSSISuKWRU-9Z5s9FqEn_sCE9i4SzuGKcHhCMmlk00I1'
+asp_rush = 'beowuxutkpnxkyywikw5epbq'
+gpstab_x_rush = 'C7756BBBBA6A2B9C4BB289C22B1F00931F38ECECC0136933C677A1BFBDC919EAAD17D0BCC24A9903B8A87441A428046F47B42D1612955E5E7E60645CC668E0E17E4C714A02004A4178F8165EEA6636F58DD2497E66A91DD5EA8A3D30A5E060808D70E0A2061CC582688F6789D723F7DB79C5EB364300267B97B5B8AD18BC465589C2225F2FE1EC3804A8F8D4E7C1FC379046A44DFEA48D0BAC4469C702A6940921BF41AFD4C11427A4994C01256B19359916CD3BAA20191C0AFF9FBBF6243F690925253E969ED32C021D291073D4FB0B3421F08C153AE114E5BC2A278BE7704D143BFFAA43044C603D1231993611789E4E95DBCF5B09C34FE74F2BD9D894FE1CC5DE86AFBBB88DFD46ED19CDEE5B6F33D1118E9FD3254508387A7B7A666F49BFDC8817A5579354E05861E15B07CEA395505BB02A66A2EEF85F6C31207CB33D19BE0C320CA8A0465E2A5ABBB12B3A894DF85224A2C08DA314443F4E94D8ED976D7384DFB60AEA905A1A2ACCA397C8DBDE48B41A114CE0FF47E03FA2EE447342CB'
+
 def parse_duties():
 
     data_list = [
@@ -181,6 +185,29 @@ def parse_duties():
                 'referer': 'https://app.tfmeld.com/client/trucks',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
+        },
+        {
+            'site': 'rush trucking', 
+            'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
+            'cookies': {
+                # 'login': '0608muhammad@gmail.com',
+                '__RequestVerificationToken': token_rush,
+                'ASP.NET_SessionId': asp_rush,
+                # 'login_t': '2021-03-13T02:11:53.552Z',
+                # '_ga': 'GA1.2.1724191859.1614661196',
+                'gpstab_x': gpstab_x_rush
+            },        
+            'headers': {
+                'sec-fetch-dest': 'empty',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'x-requested-with': 'XMLHttpRequest',
+                'authority': 'app.tfmeld.com',
+                'referer': 'https://app.tfmeld.com/client/trucks',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+            }
         }
     ]
 
@@ -385,6 +412,29 @@ def parse_urls(start_date, end_date):
                 # '_ga': 'GA1.2.1724191859.1614661196',
                 'gpstab_x': '8D9BCD9BCE1C50DBB7642C4B1DF4D00481C0CB4E062CE69D51A83E84219BAAC87FD2061C901B961F8A3FE40E5B5F3DC803289DF09D2139D053BDA96D53ED77218DD25B26CD2A064C22800E369D8283502432F21F3B29518DAB1E1EDB3430FE5E396A5239F8AB83BB6EEFAD47F29CCDFE04539A11A2E1EB92E87DEE6957423B2F29FAA5C5FC12231EF5950611E38FA4CF7D820A48578D39EED368E03AD5A56CDF95ED0210DE1A61357E429C7E9D35FD3C65D016D3B215406F0AC38EDDF749FD27D5CC623194895F4D5D15AE73BAB6C0B370C11DC6BCA845E1D40FB48E25ADBD8E9DF6FAAA1247C4FF2A8C2D977D70ECCAACE01F57B1A2A14486B2E6ED038865BCE02D6DFDF627FD0BF1291AFC1C4DB3905764B89B44A8141E4C758846AEF86FE189F4C83BC1A3B2295FA46F0DD0694D45584B93EE867804874FEAFBE1B48DC7B2FB0B3AA0E45377472E1C74A4B4B45E1A1ABC44C40C719766306D59E544D03216968198B68C7A2FEC3F5784363B1565D1'
             },        
+            'headers': {
+                'sec-fetch-dest': 'empty',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'x-requested-with': 'XMLHttpRequest',
+                'authority': 'app.tfmeld.com',
+                'referer': 'https://app.tfmeld.com/client/logs',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+            },
+        },
+        {
+            'site': 'Rush trukcing', 
+            'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
+            'cookies': {
+                # 'login': '0608muhammad@gmail.com',
+                '__RequestVerificationToken': token_rush,
+                'ASP.NET_SessionId': asp_rush,
+                # 'login_t': '2021-03-13T02:11:53.552Z',
+                # '_ga': 'GA1.2.1724191859.1614661196',
+                'gpstab_x': gpstab_x_rush
+            },                
             'headers': {
                 'sec-fetch-dest': 'empty',
                 'accept-encoding': 'gzip, deflate, br',
