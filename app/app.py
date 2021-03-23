@@ -126,6 +126,7 @@ def parse_duties():
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         },
+        
         {
             'site': 'Silk Road', 
             'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
@@ -149,6 +150,7 @@ def parse_duties():
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         },
+
         {
             'site': 'A Star', 
             'url': 'https://app.tfmeld.com/client/units/listfortracks?s=1&d=false',
@@ -172,6 +174,7 @@ def parse_duties():
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         },
+
         {
             'site': 'MIR Uz Trucking', 
             'url': 'https://app.tfmeld.com/client/units/listfortracks?s=1&d=false',
@@ -195,6 +198,7 @@ def parse_duties():
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         },
+
         {
             'site': 'rush trucking', 
             'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
@@ -217,31 +221,31 @@ def parse_duties():
                 'referer': 'https://app.tfmeld.com/client/trucks',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             }
-        }
         },
-        {
-            'site': 'Aco 1', 
-            'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
-            'cookies': {
-                'login': 'aco1transportinc@gmail.com',
-                '__RequestVerificationToken': token_aco,
-                'ASP.NET_SessionId': asp_aco,
-                'login_t': login_t_aco,
-                # '_ga': 'GA1.2.1724191859.1614661196',
-                'gpstab_x': gpstab_x_aco
-            },        
-            'headers': {
-                'sec-fetch-dest': 'empty',
-                'accept-encoding': 'gzip, deflate, br',
-                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
-                'sec-fetch-mode': 'cors',
-                'sec-fetch-site': 'same-origin',
-                'x-requested-with': 'XMLHttpRequest',
-                'authority': 'app.tfmeld.com',
-                'referer': 'https://app.tfmeld.com/client/trucks',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
-            }
-        }
+        
+        # {
+        #     'site': 'Aco 1', 
+        #     'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
+        #     'cookies': {
+        #         'login': 'aco1transportinc@gmail.com',
+        #         '__RequestVerificationToken': token_aco,
+        #         'ASP.NET_SessionId': asp_aco,
+        #         'login_t': login_t_aco,
+        #         # '_ga': 'GA1.2.1724191859.1614661196',
+        #         'gpstab_x': gpstab_x_aco
+        #     },        
+        #     'headers': {
+        #         'sec-fetch-dest': 'empty',
+        #         'accept-encoding': 'gzip, deflate, br',
+        #         'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+        #         'sec-fetch-mode': 'cors',
+        #         'sec-fetch-site': 'same-origin',
+        #         'x-requested-with': 'XMLHttpRequest',
+        #         'authority': 'app.tfmeld.com',
+        #         'referer': 'https://app.tfmeld.com/client/trucks',
+        #         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+        #     }
+        # }
     ]
 
 
@@ -482,29 +486,29 @@ def parse_urls(start_date, end_date):
             },
         },
         
-        {
-            'site': 'Aco 1', 
-            'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
-            'cookies': {
-                'login': 'aco1transportinc@gmail.com',
-                '__RequestVerificationToken': token_aco,
-                'ASP.NET_SessionId': asp_aco,
-                'login_t': login_t_aco,
-                # '_ga': 'GA1.2.1724191859.1614661196',
-                'gpstab_x': gpstab_x_aco
-            },                
-            'headers': {
-                'sec-fetch-dest': 'empty',
-                'accept-encoding': 'gzip, deflate, br',
-                'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
-                'sec-fetch-mode': 'cors',
-                'sec-fetch-site': 'same-origin',
-                'x-requested-with': 'XMLHttpRequest',
-                'authority': 'app.gpstab.com',
-                'referer': 'https://app.gpstab.com/client/logs',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
-            },
-        }
+        # {
+        #     'site': 'Aco 1', 
+        #     'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
+        #     'cookies': {
+        #         'login': 'aco1transportinc@gmail.com',
+        #         '__RequestVerificationToken': token_aco,
+        #         'ASP.NET_SessionId': asp_aco,
+        #         'login_t': login_t_aco,
+        #         # '_ga': 'GA1.2.1724191859.1614661196',
+        #         'gpstab_x': gpstab_x_aco
+        #     },                
+        #     'headers': {
+        #         'sec-fetch-dest': 'empty',
+        #         'accept-encoding': 'gzip, deflate, br',
+        #         'accept-language': 'en,en-US;q=0.9,ru;q=0.8,uz;q=0.7',
+        #         'sec-fetch-mode': 'cors',
+        #         'sec-fetch-site': 'same-origin',
+        #         'x-requested-with': 'XMLHttpRequest',
+        #         'authority': 'app.gpstab.com',
+        #         'referer': 'https://app.gpstab.com/client/logs',
+        #         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+        #     },
+        # }
     ]
 
     
