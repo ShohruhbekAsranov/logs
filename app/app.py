@@ -200,7 +200,7 @@ def parse_duties():
         },
 
         {
-            'site': 'rush trucking', 
+            'site': 'Rush trucking', 
             'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
             'cookies': {
                 # 'login': '0608muhammad@gmail.com',
@@ -463,7 +463,7 @@ def parse_urls(start_date, end_date):
         },
 
         {
-            'site': 'Rush trukcing', 
+            'site': 'Rush trucking', 
             'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
             'cookies': {
                 # 'login': '0608muhammad@gmail.com',
