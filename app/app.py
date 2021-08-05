@@ -300,7 +300,7 @@ def parse_urls(start_date, end_date):
         
         {        
             'site': 'Lidotransinc', 
-            'url': 'https://app.gpstab.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=200&ts={0}T00%3A00%3A00.000Z&te={1}T04%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
+            'url': 'https://app.tfmeld.com/client/logs/list?p=1&s=-1&di=&vh=0&gr=0&dr=0&es=0&is=0&ps=50&ts={0}T06%3A00%3A00.000Z&te={1}T05%3A59%3A59.999Z&tr=9'.format(start_date, end_date),
             'cookies': {
                 '__RequestVerificationToken': token_lido,
                 'gpstab_x': gpstab_x_lido
@@ -312,8 +312,8 @@ def parse_urls(start_date, end_date):
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
                 'x-requested-with': 'XMLHttpRequest',
-                # 'authority': 'app.brightroadstar.com',
-                'referer': 'https://app.gpstab.com/client/trucks',
+                'authority': 'app.tfmeld.com',
+                'referer': 'https://app.tfmeld.com/client/logs',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         
