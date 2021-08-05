@@ -83,7 +83,7 @@ def parse_duties():
 
         {
             'site': 'Lidotransinc', 
-            'url': 'https://app.gpstab.com/client/units/listfortracks?s=1&d=false',
+            'url': 'https://app.tfmeld.com/client/units/listfortracks?s=1&d=false',
             'cookies': {
                 '__RequestVerificationToken': token_lido,
                 'gpstab_x': gpstab_x_lido
@@ -95,8 +95,8 @@ def parse_duties():
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
                 'x-requested-with': 'XMLHttpRequest',
-                # 'authority': 'app.brightroadstar.com',
-                'referer': 'https://app.gpstab.com/client/trucks',
+                'authority': 'app.tfmeld.com',
+                'referer': 'https://app.tfmeld.com/client/trucks',
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
             },
         },
